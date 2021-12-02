@@ -1,5 +1,7 @@
 package com.geekbrains;
 
+import com.geekbrains.calculators.ReversePolishNotationCalculator;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,10 +16,11 @@ public class CalculatorApp extends JFrame {
     private static JButton[] actionButtons = new JButton[10];
     private static JButton[] digitalButtons = new JButton[10];
     private static JPanel buttonsMiddlePanel = new JPanel();
-    private static JPanel buttonsSouthPanel = new JPanel();
-    private static CalculatorTextField textField = new CalculatorTextField();
 
     public CalculatorApp() {
+
+        ReversePolishNotationCalculator rpnCalculator = new ReversePolishNotationCalculator();
+        CalculatorTextField textField = new CalculatorTextField(rpnCalculator);
 
         setBounds(500, 500, 450, 330);
         setTitle("Calculator");
