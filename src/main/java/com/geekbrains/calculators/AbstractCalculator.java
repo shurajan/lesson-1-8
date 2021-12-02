@@ -38,7 +38,7 @@ public abstract class AbstractCalculator {
                     }
                 } else {
                     //Некорректное поведение - два оператора подряд
-                    throw new IncorrectFormulaException("Two consequence operators");
+                    throw new IncorrectFormulaException("Two consequent operators");
                 }
             }
 
